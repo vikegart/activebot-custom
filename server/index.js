@@ -1,25 +1,31 @@
 const express = require('express');
-const app = express();
-const port = process.env.PORT || 3000;
-
-app.use('/', express.static('client/'));
-
-const fs = require('fs');
 const cheerio = require('cheerio');
 const got = require('got');
 
-const vgmUrl = 'https://activebot.ru/c/z1NLjNvWR';
+const app = express();
+app.use('/', express.static('client/'));
+
+const port = process.env.PORT || 3000;
+const vgmUrl = process.env.URL || 'https://activebot.ru/c/z1NLjNvWR';
+const TIMEOUT = 1000;
 
 let tableData;
 
-got(vgmUrl).then(response => {
-	const $ = cheerio.load(response.body);
-	tableData = cheerio.html($("body > div.container-fluid.public-contest > div.table-responsive-lg.text-center"));
-}).catch(err => {
-	console.dir(err);
-});
+setInterval(() => {
+	got(vgmUrl).then(response => {
+		const $ = cheerio.load(response.body);
+		const tableSelector = 'body > div.container-fluid.public-contest > div.table-responsive-lg.text-center';
+		const exec = cheerio.html || cheerio.default.html;
+		tableData = exec($(tableSelector));
+	}).catch(err => {
+		console.dir(err);
+	});
+}, TIMEOUT);
 
-app.get('/getdata/', (req, res) => {
+app.get('/getdata', (req, res) => {
+	if (tableData === undefined){
+		res.send('error');
+	}
 	res.send(`
 		<div class="bg" style="background: linear-gradient(45deg, #f9aa01 0%, #f7f7f7 100%);"></div>
 		<div class="container-fluid public-contest">
