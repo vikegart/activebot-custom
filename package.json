@@ -5,8 +5,8 @@
   "main": "./server/index.js",
   "scripts": {
     "deploy": "npm i && node server/index.js",
-    "start": "cd server && node index.js",
-    "dev": "cd server && nodemon index.js"
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
