@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use('/', express.static('client/'));
 
-app.get('/', (req, res) => {
+app.get('/getdata/', (req, res) => {
 	res.send(`
 		<div class="bg" style="background: linear-gradient(45deg, #f9aa01 0%, #f7f7f7 100%);"></div>
 		<div class="container-fluid public-contest">
