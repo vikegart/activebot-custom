@@ -21,3 +21,17 @@ app.get('/getdata/', (req, res) => {
 app.listen(port, () => {
 	console.log(`Example app listening at http://localhost:${port}`);
 });
+
+// implementing Cherio parsing
+const fs = require('fs');
+const cheerio = require('cheerio');
+const got = require('got');
+
+const vgmUrl = 'https://activebot.ru/c/z1NLjNvWR';
+
+got(vgmUrl).then(response => {
+	const $ = cheerio.load(response.body);
+	console.log($("body > div.container-fluid.public-contest > div.table-responsive-lg.text-center > div")[0].children[0]);
+}).catch(err => {
+	console.log(err);
+});
