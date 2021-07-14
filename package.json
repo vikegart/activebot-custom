@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/vikegart/activebot-custom/issues"
   },
-  "homepage": "https://github.com/vikegart/activebot-custom#readme"
+  "homepage": "https://github.com/vikegart/activebot-custom#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
