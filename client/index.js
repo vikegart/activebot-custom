@@ -6,7 +6,15 @@ const render = data => BODY.innerHTML = data;
 
 const getData = () => {
     return new Promise((resolve, reject) => {
-        setTimeout(() => { resolve(fakedata) }, 500);
+        fetch('/getdata').then(rawData => {
+            rawData.text().then(tableData => {
+                resolve(tableData);
+            })
+        },
+            err => {
+                console.log(err);
+            }
+        );
     })
 }
 
