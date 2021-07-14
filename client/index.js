@@ -10,6 +10,9 @@ const getData = () => {
     })
 }
 
-setInterval(() => {
-    getData().then(data => render(data));
-}, 500)
+// setInterval(() => {
+//     getData().then(data => render(data));
+// }, 500)
+
+
+getData().then(data => render(data));
