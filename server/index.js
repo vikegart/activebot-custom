@@ -14,7 +14,7 @@ let tableData;
 
 got(vgmUrl).then(response => {
 	const $ = cheerio.load(response.body);
-	tableData = $("body > div.container-fluid.public-contest > div.table-responsive-lg.text-center > div")[0];
+	tableData = cheerio.html($("body > div.container-fluid.public-contest > div.table-responsive-lg.text-center"));
 }).catch(err => {
 	console.dir(err);
 });
@@ -27,9 +27,7 @@ app.get('/getdata/', (req, res) => {
 				<div class="logo"></div>
 			</div>
 			<div class="table-responsive-lg text-center">
-				<div class="table">
-					${tableData}
-				</div>
+				${tableData}
 		</div>`);
 });
 
