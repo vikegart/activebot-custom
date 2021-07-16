@@ -1,0 +1,118 @@
+.table>i>i{
+    background-size: 62px;
+    background-repeat: no-repeat;
+}
+
+.table>i:nth-child(2)>i[b]{
+    background-image: url('./popit-imgs/1_close.png');
+    background-position-y: 6px;
+}
+.table>i:nth-child(2)>i:nth-child(1n+2):not([b]){
+    background-image: url('./popit-imgs/1_open.png');
+    background-position-y: 6px;
+}
+
+.table>i:nth-child(3)>i[b]{
+    background-image: url('./popit-imgs/2_close.png');
+    background-position-y: 5px;
+}
+.table>i:nth-child(3)>i:nth-child(1n+2):not([b]){
+    background-image: url('./popit-imgs/2_open.png');
+    background-position-y: 5px;
+}
+
+.table>i:nth-child(4)>i[b]{
+    background-image: url('./popit-imgs/3_close.png');
+    background-position-y: 2px;
+}
+.table>i:nth-child(4)>i:nth-child(1n+2):not([b]){
+    background-image: url('./popit-imgs/3_open.png');
+    background-position-y: 2px;
+}
+
+.table>i:nth-child(5)>i[b]{
+    background-image: url('./popit-imgs/4_close.png');
+    background-position-y: 2px;
+}
+.table>i:nth-child(5)>i:nth-child(1n+2):not([b]){
+    background-image: url('./popit-imgs/4_open.png');
+    background-position-y: 2px;
+}
+
+.table>i:nth-child(6)>i[b]{
+    background-image: url('./popit-imgs/5_close.png');
+    background-position-y: 0px;
+    position: relative !important;
+    top: -2px;
+}
+.table>i:nth-child(6)>i:nth-child(1n+2):not([b]){
+    background-image: url('./popit-imgs/5_open.png');
+    background-position-y: 0px;
+    position: relative !important;
+    top: -2px;
+}
+
+.table>i:nth-child(7)>i[b]{
+    background-image: url('./popit-imgs/6_close.png');
+    background-position-y: 0px;
+    position: relative !important;
+    top: 1px;
+}
+.table>i:nth-child(7)>i:nth-child(1n+2):not([b]){
+    background-image: url('./popit-imgs/6_open.png');
+    background-position-y: 0px;
+    position: relative !important;
+    top: 1px;
+}
+
+.table>i:nth-child(8)>i[b]{
+    background-image: url('./popit-imgs/7_close.png');
+    background-position-y: 4px;
+}
+.table>i:nth-child(8)>i:nth-child(1n+2):not([b]){
+    background-image: url('./popit-imgs/7_open.png');
+    background-position-y: 4px;
+}
+
+.table>i:nth-child(9)>i[b]{
+    background-image: url('./popit-imgs/8_close.png');
+    background-position-y: 6px;
+}
+.table>i:nth-child(9)>i:nth-child(1n+2):not([b]){
+    background-image: url('./popit-imgs/8_open.png');
+    background-position-y: 6px;
+}
+
+.table>i:nth-child(10)>i[b]{
+    background-image: url('./popit-imgs/9_close.png');
+    background-position-y: 7px;
+}
+.table>i:nth-child(10)>i:nth-child(1n+2):not([b]){
+    background-image: url('./popit-imgs/9_open.png');
+    background-position-y: 7px;
+}
+
+.table>i:nth-child(11)>i[b]{
+    background-image: url('./popit-imgs/10_close.png');
+    background-position-y: 4px;
+}
+.table>i:nth-child(11)>i:nth-child(1n+2):not([b]){
+    background-image: url('./popit-imgs/10_open.png');
+    background-position-y: 4px;
+}
+
+.table>i>i:first-child{
+    text-align: left !important;
+}
+.table>i:first-child>i{
+    vertical-align: top !important;
+}
+
+b{
+    display: none !important;
+}
+
+.table i, .table a, .table i[b] {
+    border-color: transparent !important;
+    background-color: transparent !important;
+}

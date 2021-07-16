@@ -13,11 +13,11 @@ body {
 .table::before{
     width: 100%;
     height: 100%;
-    background-image: url(./popit-trans.png);
+    background-image: url(./popit-imgs/popit_background.png);
     background-size: 700px;
     content: " ";
     position: absolute;
-    top: 45px;
+    top: 42px;
     left: 38px;
     background-repeat: no-repeat;
 }
@@ -32,6 +32,9 @@ body {
     display: block;
     padding-bottom: 20%;
 }
+
+
+
 
 @keyframes spin {
     0% {
