@@ -6,7 +6,7 @@ const app = express();
 app.use('/', express.static('client/'));
 
 const port = process.env.PORT || 3000;
-const vgmUrl = process.env.URL || 'https://activebot.ru/c/zpjJE3BYg';
+const vgmUrl = process.env.URL || 'https://activebot.ru/c/zkqpO1XEg';
 const TIMEOUT = 1000;
 
 let tableData;
@@ -25,6 +25,7 @@ setInterval(() => {
 app.get('/getdata', (req, res) => {
 	if (tableData === undefined){
 		res.send('error');
+		return;
 	}
 	res.send(`
 		<div class="bg" style="background: linear-gradient(45deg, #f9aa01 0%, #f7f7f7 100%);"></div>

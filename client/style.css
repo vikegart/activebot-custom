@@ -6,7 +6,7 @@ body {
     background: #474747;
 }
 
-.table-responsive-lg, table{
+.table-responsive-lg, .table{
     position: relative;
 }
 
