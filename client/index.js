@@ -19,5 +19,5 @@ const getData = () => {
 }
 
 setInterval(() => {
-    getData().then(data => render(data));
 }, 1000)
+getData().then(data => render(data));
