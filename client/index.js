@@ -39,6 +39,10 @@ const getData = () => {
     })
 }
 
-setInterval(() => {
-    getData().then(data => render(data));
-}, 1000)
+const runGetStats = () => {
+    setInterval(() => {
+        getData().then(data => render(data));
+    }, 1000)   
+}
+
+document.onload = runGetStats();
