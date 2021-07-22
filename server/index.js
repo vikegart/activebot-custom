@@ -6,7 +6,7 @@ const app = express();
 app.use('/', express.static('client/'));
 
 const port = process.env.PORT || 3000;
-const vgmUrl = process.env.URL || 'https://activebot.ru/c/zkqpO1XEg';
+const vgmUrl = process.env.URL || 'https://activebot.ru/c/z1NkG5G3R';
 const TIMEOUT = 1000;
 
 let tableData;
